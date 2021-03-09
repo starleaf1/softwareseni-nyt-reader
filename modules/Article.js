@@ -20,14 +20,14 @@ module.exports = class Article {
   }
 
   static async list(keyword, sort = 'descending', page=0) {
-    let response = await axios.get("https://api.nytimes.com/svc/search/v2/articlesearch.json", {
+    let request = await axios.get("https://api.nytimes.com/svc/search/v2/articlesearch.json", {
       params: {
         'api-key': process.env.NYT_API_KEY,
         q: keyword || null,
         page: page
       }
     })
-    var rawData = response.data.response
+    var rawData = request.data.response
     var docs = rawData.docs.map((doc, i) => {
       var title = doc.headline.main
       var abstract = doc.abstract
