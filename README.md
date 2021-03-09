@@ -31,7 +31,7 @@ Article search
 `reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for preformance reasons.
 `status` _string_ The status of the request operations. `ok` indicates success.
 
-### `GET /books/{listName}
+### `GET /books/{listName}`
 Returns list of best-selling books.
 
 #### URL Parameters
