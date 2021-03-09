@@ -30,7 +30,7 @@ Article search
 * `imageUrl` _string_ The web URL of the article's main image.
 * `url` _string_ The URL to the article on NYT's website.
 * `publishDate` _string_ A string representing publication date of the article, formatted in ISO 8601.
-`reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for preformance reasons.
+`reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for peformance measurement purposes.
 `status` _string_ The status of the request operations. `ok` indicates success.
 
 ### `GET /books/{listName}`
@@ -40,7 +40,7 @@ Returns list of best-selling books.
 `listName` _required_ The name of the list, such as "e-book-fiction" or "hardcover-fiction".
 
 #### Response Fields
-`reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for preformance reasons.
+`reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for peformance measurement purposes.
 
 `status` _string_ The status of the request operations. `ok` indicates success.
 
