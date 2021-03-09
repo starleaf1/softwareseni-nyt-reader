@@ -22,6 +22,10 @@ Article search
 `page` The page to view. NYT API only displays 10 results at a time. To view other articles, use this parameters. The first page number is `0`.
 
 #### Response Fields
+`reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for peformance measurement purposes.
+
+`status` _string_ The status of the request operations. `ok` indicates success.
+
 `articles` _array_ The array containing articles returned from the search. Each element of the array contains the following:
 * `title` _string_ The main title of the article.
 * `abstract` _string_ A short abstract of the article.
@@ -30,8 +34,6 @@ Article search
 * `imageUrl` _string_ The web URL of the article's main image.
 * `url` _string_ The URL to the article on NYT's website.
 * `publishDate` _string_ A string representing publication date of the article, formatted in ISO 8601.
-`reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for peformance measurement purposes.
-`status` _string_ The status of the request operations. `ok` indicates success.
 
 ### `GET /books/{listName}`
 Returns list of best-selling books.
