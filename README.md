@@ -16,7 +16,9 @@ All endpoints in this API responds in JSON.
 Article search
 #### Query Parameters
 `keyword` The keyword to look for.
+
 `sort` The sorting method. Accepts `ascending` or `descending`.
+
 `page` The page to view. NYT API only displays 10 results at a time. To view other articles, use this parameters. The first page number is `0`.
 
 #### Response Fields
@@ -35,11 +37,13 @@ Article search
 Returns list of best-selling books.
 
 #### URL Parameters
-`listName` The name of the list, such as "e-book-fiction" or "hardcover-fiction".
+`listName` _required_ The name of the list, such as "e-book-fiction" or "hardcover-fiction".
 
 #### Response Fields
 `reqCompletedAt` _string_ An ISO 8601 string representing the time of request completion. Included for preformance reasons.
+
 `status` _string_ The status of the request operations. `ok` indicates success.
+
 `books` _array_ The array containing books in the list. Each element of the array contains the following:
 * `title` _string_ The title of the book.
 * `author` _string_ The author(s) of the book
