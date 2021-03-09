@@ -47,6 +47,10 @@ app.get('/books/:listName', async (req, res, next) => {
   }
 })
 
+app.get('*', (req, res) => {
+  res.sendStatus(404)
+})
+
 app.listen(8080, function (err) {
   if (err) { console.error(err) }
   console.log('App is running. Visit http://localhost:8080')
